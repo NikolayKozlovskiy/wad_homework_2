@@ -1,0 +1,8 @@
+Team U:
+Anhelina Lohvina, C18347
+Nikolay Kozlovsky, C18206
+Maanus Harju, B04870
+
+The website for checking the correctness of the JSON file - https://jsoneditoronline.org/#left=local.qegame&right=local.cikati
+The website for creating the JSON file online - https://myjson.dit.upm.es/ 
+URI for our JSON: http://myjson.dit.upm.es/api/bins/augq 
