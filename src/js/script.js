@@ -1,7 +1,7 @@
-
-fetch('./res/json/post_json.json')
+fetch('https://api.npoint.io/5c040cf59c72aae351bf')
 .then((response) => response.json())
 .then(json => {
+    var posts = document.getElementById("posts");
     for (let post_object of json){
 
         let feed_item=document.createElement('div')
@@ -55,6 +55,9 @@ fetch('./res/json/post_json.json')
         post_content.appendChild(text_post)
         post_content.appendChild(like_button)
 
+        posts.appendChild(feed_item)
+        
     }
 
 })
+
