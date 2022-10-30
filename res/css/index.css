@@ -21,7 +21,7 @@ body a {
 }
 
 /* id selector */
-#page { 
+#page {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -218,7 +218,6 @@ body a {
   text-align: center;
 }
 
-
 .dropbtn {
   background-color: #3498DB;
   color: white;
@@ -257,4 +256,3 @@ body a {
 .dropdown-content a:hover {background-color: #ddd;}
 
 .show {display: block;}
-
