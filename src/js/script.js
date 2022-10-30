@@ -1,4 +1,7 @@
-fetch('https://api.npoint.io/5c040cf59c72aae351bf')
+//fetch('http://myjson.dit.upm.es/api/bins/7l9a')
+//fetch('https://api.npoint.io/5c040cf59c72aae351bf')
+fetch('http://myjson.dit.upm.es/api/bins/3ini')
+//fetch('./res/json/post_json.json')
 .then((response) => response.json())
 .then(json => {
     var posts = document.getElementById("posts");
@@ -40,20 +43,38 @@ fetch('https://api.npoint.io/5c040cf59c72aae351bf')
         post_profile.appendChild(profilePLate)
         post_profile.appendChild(author_name)
 
+        if (("photo" in post_object)==true)
+        {
+        let picture_post=document.createElement('div')
+        picture_post.setAttribute('class', 'post-contentItem')
+        let post_image=document.createElement('img')
+        post_image.setAttribute('src', post_object.photo)
+        post_image.setAttribute('class', 'post-image')
+        post_image.setAttribute('alt', 'image')
+
+        picture_post.appendChild(post_image)
+        post_content.appendChild(picture_post)
+        }
+
         let text_post=document.createElement('div')
         text_post.setAttribute('class', 'post-contentItem')
         text_post.innerHTML=post_object.body
+
         let like_button=document.createElement('div')
         like_button.setAttribute('class', 'post-contentItem')
+
         let button_image=document.createElement('img')
         button_image.setAttribute('src', './res/images/like_thumb..png')
         button_image.setAttribute('srcset', './res/images/like_thumb.png 2x')
         button_image.setAttribute('class', 'post-image-like')
         button_image.setAttribute('alt', 'like button')
+
+
         like_button.appendChild(button_image)
 
         post_content.appendChild(text_post)
         post_content.appendChild(like_button)
+
 
         posts.appendChild(feed_item)
 
